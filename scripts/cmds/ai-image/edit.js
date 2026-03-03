@@ -18,7 +18,7 @@ module.exports = {
   config: {
     name: "edit",
     version: "1.0",
-    author: "NC-Saimx69x", //API by Kay
+    author: "NC-Saimx69x",// 𝗙𝗶𝘅𝗲𝗱 𝗯𝘆 𝗧𝗮𝗺𝗶𝗺 𝗕𝗯𝘇
     countDown: 5,
     role: 0,
     shortDescription: "Edit an image using text prompt",
@@ -40,7 +40,7 @@ module.exports = {
       return message.reply("❌ Please provide an edit prompt.");
     }
 
-    const processingMsg = await message.reply("🖌️ Editing image...");
+    const processingMsg = await message.reply("🖌️ 𝗘𝗱𝗶𝘁𝗶𝗻𝗴 𝗶𝗺𝗮𝗴𝗲....");
 
     const imgPath = path.join(
       __dirname,
@@ -68,14 +68,14 @@ module.exports = {
       await api.unsendMessage(processingMsg.messageID);
 
       await message.reply({
-        body: `✅ Image edited successfully\nPrompt: ${prompt}`,
+        body: `✅ 𝗜𝗺𝗮𝗴𝗲 𝗲𝗱𝗶𝘁𝗲𝗱 𝘀𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆\nPrompt: ${prompt}`,
         attachment: fs.createReadStream(imgPath)
       });
 
     } catch (error) {
-      console.error("EDIT Error:", error?.response?.data || error.message);
+      console.error("𝗘𝗱𝗶𝘁 𝗘𝗿𝗿𝗼𝗿:", error?.response?.data || error.message);
       await api.unsendMessage(processingMsg.messageID);
-      message.reply("❌ Failed to edit image. Try again later.");
+      message.reply("❌ 𝗙𝗮𝗶𝗹𝗱 𝘁𝗼 𝗲𝗱𝗶𝘁 𝗶𝗺𝗮𝗴𝗲..𝗧𝗿𝘆 𝗮𝗴𝗮𝗶𝗻 𝗹𝗮𝘁𝗲𝗿.");
     } finally {
       if (fs.existsSync(imgPath)) {
         await fs.remove(imgPath);
