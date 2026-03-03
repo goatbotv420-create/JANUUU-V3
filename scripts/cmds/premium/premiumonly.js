@@ -8,7 +8,7 @@ module.exports = {
                 name: "premiumonly",
                 aliases: ["pmonly", "onlypm", "onlypremium"],
                 version: "1.5",
-                author: "NTKhang",
+                author: "NTKhang",// 𝗙𝗶𝘅𝗲𝗱 𝗯𝘆 𝗧𝗮𝗺𝗶𝗺 𝗕𝗯𝘇
                 countDown: 5,
                 role: 2,
                 description: {
@@ -67,7 +67,7 @@ module.exports = {
                                         config.premiumOnly.ignoreCommand.push("account");
                                 }
                         }
-                        message.reply(getLang(value ? "turnedOn" : "turnedOff"));
+                        message.reply(getLang(value ? "𝗧𝗨𝗥𝗡𝗘𝗗 𝗢𝗡" : "𝗧𝗨𝗥𝗡𝗘𝗗 𝗢𝗙𝗙"));
                 }
 
                 fs.writeFileSync(client.dirConfig, JSON.stringify(config, null, 2));
