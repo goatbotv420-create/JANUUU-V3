@@ -6,9 +6,9 @@ const config = ncsetting;
 module.exports = {
   config: {
     name: "wl",
-    aliases: ["wlonly", "whitelist"],
+    aliases: ["wlonly", "whitelist", "wl"],
     version: "2.0",
-    author: "NoobCore Team", // Fixed by Yeasin Arafat 
+    author: "NoobCore Team", // 𝗙𝗶𝘅𝗲𝗱 𝗯𝘆 𝗧𝗮𝗺𝗶𝗺 𝗕𝗯𝘇
     countDown: 5,
     role: 3,
     description: {
@@ -19,7 +19,7 @@ module.exports = {
       en:
         "━━━━━━━━━━━━━━━━━━━━\n" +
         "╔════════════════════╗\n" +
-        "║   WHITELIST MENU   ║\n" +
+        "║        𝗪𝗛𝗜𝗧𝗘𝗟𝗜𝗦𝗧 𝗠𝗘𝗡𝗨          ║\n" +
         "╚════════════════════╝\n" +
         "━━━━━━━━━━━━━━━━━━━━\n" +
         "➤ {pn} add [uid/@tag] - Add user to whitelist\n" +
@@ -397,8 +397,8 @@ module.exports = {
       case "count":
       case "total": {
         const total = config.whiteListMode.whiteListIds.length;
-        const modeStatus = config.whiteListMode.enable ? "✅ ON" : "❌ OFF";
-        const notiStatus = config.hideNotiMessage.whiteListMode === false ? "✅ ON" : "❌ OFF";
+        const modeStatus = config.whiteListMode.enable ? "✅ 𝗢𝗡" : "❌ 𝗢𝗙𝗙";
+        const notiStatus = config.hideNotiMessage.whiteListMode === false ? "✅ 𝗢𝗡" : "❌ 𝗢𝗙𝗙";
 
         return message.reply(
           getLang("modeStatus", modeStatus, total, notiStatus)
@@ -408,7 +408,7 @@ module.exports = {
       case "status":
       case "info": {
         const total = config.whiteListMode.whiteListIds.length;
-        const modeStatus = config.whiteListMode.enable ? "🟢 ENABLED" : "🔴 DISABLED";
+        const modeStatus = config.whiteListMode.enable ? "🟢 𝗘𝗡𝗔𝗕𝗟𝗘𝗗" : "🔴 𝗗𝗜𝗦𝗔𝗕𝗟𝗘𝗗";
         const notiStatus = config.hideNotiMessage.whiteListMode === false ? "🔔 ENABLED" : "🔕 DISABLED";
 
         const statusMessage = 
