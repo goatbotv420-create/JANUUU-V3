@@ -98,7 +98,7 @@ module.exports = {
     name: "help",
     version: "7.6",
     modify: ["NC-XNIL", "NC-SAIM"],
-    author: "NoobCore Team",
+    author: "NoobCore Team",// 𝗙𝗶𝘅𝗲𝗱 𝗯𝘆 𝗧𝗮𝗺𝗶𝗺 𝗕𝗯𝘇
     countDown: 5,
     role: 0,
     autoUnseen: 40,
@@ -239,17 +239,17 @@ module.exports = {
       const usePrefix = cfg.usePrefix !== false;
 
       let msg = `╭─╼════════════════╾─╮\n`;
-      msg += `│ 📘 Command: ${applyFont(prefix + name, fontCommand)}\n`;
-      msg += `│ 🗂️ Category: ${emoji} | ${applyFont(category, fontCategory)}\n`;
-      msg += `│ 📄 Description: ${shortDesc || "No description"}\n`;
-      msg += `│ 🧩 Aliases: ${aliasesList}\n`;
-      msg += `│ ⚙️ Version: ${version}\n`;
-      msg += `│ ⏳ Cooldown: ${cooldown}s\n`;
-      msg += `│ 🧷 Role: ${roleText}\n`;
-      msg += `│ 👑 Author: ${author}\n`;
-      msg += `│ 💎 Premium Only: ${premium ? "✅ Yes" : "❌ No"}\n`;
-      msg += `│ 🧮 modified by: ${modify} \n`;
-      msg += `│ 🔤 Use Prefix: ${usePrefix ? "✅ Yes" : "❌ No"}\n`;
+      msg += `│ 📘 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: ${applyFont(prefix + name, fontCommand)}\n`;
+      msg += `│ 🗂️ 𝗖𝗮𝘁𝗮𝗴𝗼𝗿𝘆: ${emoji} | ${applyFont(category, fontCategory)}\n`;
+      msg += `│ 📄 𝗗𝗲𝘀𝗰𝗿𝗶𝗽𝘁𝗶𝗼𝗻: ${shortDesc || "No description"}\n`;
+      msg += `│ 🧩 𝗔𝗹𝗶𝗮𝘀𝗲𝘀: ${aliasesList}\n`;
+      msg += `│ ⚙️ 𝗩𝗲𝗿𝘀𝗶𝗼𝗻: ${version}\n`;
+      msg += `│ ⏳ 𝗖𝗼𝗼𝗹𝗱𝗼𝘄𝗻: ${cooldown}s\n`;
+      msg += `│ 🧷 𝗥𝗼𝗹𝗲: ${roleText}\n`;
+      msg += `│ 👑 𝗔𝘂𝘁𝗵𝗼𝗿: ${author}\n`;
+      msg += `│ 💎 𝗣𝗿𝗲𝗺𝗶𝘂𝗺 𝗢𝗻𝗹𝘆: ${premium ? "✅ 𝗬𝗲𝘀" : "❌ 𝗡𝗼"}\n`;
+      msg += `│ 🧮 |𝗠𝗼𝗱𝗶𝗳𝗶𝗲𝗱 𝗯𝘆 𝗧𝗮𝗺𝗶𝗺 𝗕𝗯𝘇
+      msg += `│ 🔤 Use Prefix: ${usePrefix ? "✅ 𝗬𝗲𝘀" : "❌ 𝗡𝗼"}\n`;
       msg += `╰─╼════════════════╾─╯\n`;
 
       msg += guide ? guide.split("\n").map(l => "│ 📜 " + l).join("\n") + "\n" : "│ 📜 Usage: No guide available\n";
@@ -268,7 +268,7 @@ module.exports = {
         cats[category].push(name);
       }
 
-      let msg = `━━━━━━━━━━━━━━\n𝘈𝘷𝘢𝘪𝘭𝘢𝘣𝘭𝘦 𝘊𝘰𝘮𝘮𝘢𝘯𝘥𝘴:\n\n`;
+      let msg = `━━━━━━━━━━━━━━\n 𝗔𝗹𝗹 𝗖𝗼𝗼𝗺𝗮𝗻𝗱𝘀:\n\n`;
 
       for (const cat of Object.keys(cats).sort()) {
         const emoji = categoryEmoji[cat] || "";
@@ -279,21 +279,21 @@ module.exports = {
       }
 
       msg += `• 𝙽𝚎𝚎𝚍 𝚑𝚎𝚕𝚙 with a command?\n Use ${prefix}help <commandname> to get full details.\n━━━━━━━━━━━━━━\n`;
-      msg += `Total Commands: ${all.length}\n ⏪ ${prefix}help ${page} | ${totalPages} ⏩\n Bot Name : ${global.noobCore.ncsetting.nickNameBot}\n 🗂️ Browse: ${prefix}help c category_name\n 👑 Dev: noobCore Team\n━━━━━━━━━━━━━━`;
+      msg += `Total Commands: ${all.length}\n ⏪ ${prefix}help ${page} | ${totalPages} ⏩\n 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ${global.noobCore.ncsetting.nickNameBot}\n 🗂️ 𝗕𝗿𝗼𝘀𝗲𝗿: ${prefix}help c category_name\n 👑 𝗢𝘄𝗻𝗲𝗿 : 𝗧𝗮𝗺𝗶𝗺 𝗕𝗯𝘇\n━━━━━━━━━━━━━━`;
 
       return message.reply({ body: msg });
     }
 
     async function sendCategoryList() {
       const entries = Object.entries(catIndex).sort((a, b) => a[0].localeCompare(b[0]));
-      let msg = `━━━━━━━━━━━━━━\n🗂️ CATEGORIES\n`;
+      let msg = `━━━━━━━━━━━━━━\n🗂️ 𝗖𝗔𝗧𝗘𝗚𝗢𝗥𝗜𝗦\n`;
 
       for (const [cat, names] of entries) {
         const emoji = categoryEmoji[cat] || "";
         msg += `• ${emoji} | ${applyFont(cat, fontCategory)} — ${names.length}\n`;
       }
 
-      msg += `━━━━━━━━━━━━━━\nUse: ${prefix}help c <name> [page]\nExample: ${prefix}help c tools\n━━━━━━━━━━━━━━`;
+      msg += `━━━━━━━━━━━━━━\nUse: ${prefix}help c <name> [page]\n𝗘𝘅𝗮𝗺𝗽𝗹𝗲: ${prefix}help c tools\n━━━━━━━━━━━━━━`;
 
       return message.reply({ body: msg });
     }
@@ -307,7 +307,7 @@ module.exports = {
       const page = Math.max(1, Math.min(total, pageNum));
       const lines = chunkCommands(chunks[page - 1], 50, t => applyFont(t, fontCommand));
 
-      let msg = `━━━━━━━━━━━━━━\n🗂️ CATEGORY: ${applyFont(cat, fontCategory)}\n`;
+      let msg = `━━━━━━━━━━━━━━\n🗂️ 𝗖𝗔𝗧𝗘𝗚𝗢𝗥𝗬: ${applyFont(cat, fontCategory)}\n`;
       for (const l of lines) msg += `${l}\n`;
       msg += `\nTotal: ${names.length} command(s) | Page ${page}/${total}\nℹ️ View details: ${prefix}help <command>\n━━━━━━━━━━━━━━`;
 
